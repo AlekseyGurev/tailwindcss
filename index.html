@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com" refer></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              imageColor: '#d1d5db',
+              borderColor: '#e5e7eb',
+              primaryColor: '#1F2937',
+              secondaryColor: '#6b7280',
+            },
+            screens: {
+              mobile: '316px',
+              tablet: '440px',
+            },
+          },
+        },
+      };
+    </script>
+    <title>Tailwind</title>
+  </head>
+  <body>
+    <main class="flex justify-center">
+      <section
+        class="mobile: min-w-[316px] h-[380px] overflow-hidden shadow-md table: w-[440px]"
+      >
+        <div class="relative">
+          <img
+            class="bg-imageColor object-cover tablet: w-[440px] h-[222px]"
+            src="img/Image.svg"
+            width="316"
+            height="222"
+            alt="картинка"
+          />
+          <button
+            class="absolute top-3 right-3 px-[10px] py-[6px] bg-white text-xs font-medium border-solid border-[1px] border-borderColor rounded-[6px]"
+          >
+            button
+          </button>
+        </div>
+        <div class="group">
+          <div
+            class="relative flex flex-col gap-3 px-3 py-4 bg-white ease-in duration-200 group-hover:translate-y-[-128px]"
+          >
+            <div class="flex justify-between">
+              <div class="flex flex-col">
+                <span class="text-[14px] text-secondaryColor">Subheader</span>
+                <h1 class="text-xl font-medium text-primaryColor">Header</h1>
+              </div>
+              <p class="self-center text-lg text-primaryColor">Text</p>
+            </div>
+
+            <div
+              class="pt-3 border-t-[1px] border-borderColor hidden group-hover:block"
+            >
+              <ul class="flex flex-col gap-2">
+                <li class="flex justify-between">
+                  <p class="text-sm text-secondaryColor">Text</p>
+                  <a class="text-sm text-primaryColor" href="#">Link</a>
+                </li>
+                <li class="flex justify-between">
+                  <p class="text-sm text-secondaryColor">Text</p>
+                  <a class="text-sm text-primaryColor" href="#">Link</a>
+                </li>
+                <li class="flex justify-between">
+                  <p class="text-sm text-secondaryColor">Text</p>
+                  <a class="text-sm text-primaryColor" href="#">Link</a>
+                </li>
+                <li class="flex justify-between">
+                  <p class="text-sm text-secondaryColor">Text</p>
+                  <a class="text-sm text-primaryColor" href="#">Link</a>
+                </li>
+              </ul>
+            </div>
+            <div class="flex flex-col gap-1">
+              <button
+                class="py-[14px] text-[15px] text-white font-semibold bg-secondaryColor rounded-lg"
+              >
+                Button
+              </button>
+              <p class="text-xs text-center text-secondaryColor">Sub text</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
